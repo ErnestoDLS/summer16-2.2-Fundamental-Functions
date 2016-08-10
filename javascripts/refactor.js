@@ -28,7 +28,9 @@ function doSomethingCool() {
 }
 
 // Put your answer below -------------------------
-
+  var doSomethingCool = function(){
+    console.log("Something Cool!");
+  }
 
 // -----------------------------------------------
 
@@ -48,7 +50,11 @@ function sayHi() {
 setTimeout(sayHi, 2000);
 
 // Put your answer below -------------------------
+// http://www.w3schools.com/js/js_timing.asp
 
+  var sayHi = setTimeout(function(){
+    alert("Hello, World!")
+  },2000);
 
 // -----------------------------------------------
 
@@ -78,7 +84,7 @@ letter = "z";
 console.log("The letter is", letter);
 
 // Put your answer below -------------------------
-
+  Its going to [c]. the setTimeout will delay the "y"
 
 // -----------------------------------------------
 
@@ -100,6 +106,9 @@ var reverseStr = function(str) {
 };
 
 // Put your answer below -------------------------
+var reverseStr = function(str) {
+  return str.split("").reverse().join("");
+};
 
 
 // -----------------------------------------------
@@ -131,7 +140,29 @@ var spanishColor = function(colorName) {
 };
 
 // Put your answer below -------------------------
+var spanishColor = function(colorName) {
+  var colorName = colorName.toLowerCase();
 
+  var colors = {
+    "rojo": {
+      hexcode: "#ff0000"
+    },
+    "blanco": {
+      hexcode: "#ffffff"
+    },
+    "azul": {
+      hexcode: "0000ff"
+    },
+    "verde": {
+      hexcode: "#00ff00"
+    },
+    "negro": {
+      hexcode: "#000000"
+    }
+  }
+  var hex = colors[colorName.toLowerCase()].hexcode
+  return hex
+};
 
 // -----------------------------------------------
 
@@ -148,7 +179,8 @@ var spanishColor = function(colorName) {
 var foo = "bar";
 
 // Put your answer below -------------------------
-
+var foo;
+foo = "bar";
 
 // -----------------------------------------------
 
@@ -170,7 +202,10 @@ var callTenTimes = function(callback) {
 };
 
 // Put your answer below -------------------------
-
+var callNtimes = function(n, callback) {
+  var range = _.range(n);
+  _.each(range, callback);
+};
 
 // -----------------------------------------------
 
@@ -198,8 +233,15 @@ var decreaseScore = function() {
 };
 
 // Put your answer below -------------------------
+var increaseScore = function() {
+  var score = 0;
+  score++;
+};
 
-
+var decreaseScore = function() {
+  var score = 0;
+  score--;
+};
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -218,7 +260,10 @@ var addNumbers = function(numberA, numberB) {
 var twoPlusTwo = addNumbers(2,2);
 
 // Put your answer below -------------------------
-
+var addNumbers = function(numberA, numberB) {
+  var twoPlusTwo = numberA + numberB;
+  return twoPlusTwo
+};
 
 // -----------------------------------------------
 
